@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./variables.css');
+@import url('./burger_menu.css');
+@import url('./scrollbar.css');
+@import url('./suisseIntl_font.css');
+
+body {
+  color: var(--foreground);
+  background: #eaeaec;
+  font-family: Arial, Helvetica, sans-serif;
+}

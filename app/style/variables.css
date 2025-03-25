@@ -1,0 +1,22 @@
+:root {
+  --background: #eaeaec;
+  --foreground: #100f11;
+
+  --fierly-foreground: #ff492a;
+  --fierly-background: #ff492a; /** TODO: поменять */
+
+  --light-gray-foreground: #676774;
+  --light-gray-background: #676774; /** TODO: поменять */
+
+  /** Sizes */
+  --header-mobile-height: 60px;
+  --header-desktop-height: 80px;
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #100f11;
+    --foreground: #eaeaec;
+  }
+} */

@@ -1,0 +1,22 @@
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--foreground);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fierly-foreground);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* 
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3134;
+  transform: scale(1.2);
+} 
+ */
