@@ -1,9 +1,14 @@
 :root {
-  --background: #eaeaec;
-  --foreground: #100f11;
+  --background: #000a0d;
+  --foreground: #f0eae3;
 
-  --fierly-foreground: #ff492a;
-  --fierly-background: #ff492a; /** TODO: поменять */
+  --fierly-foreground: #ffd700;
+  --fierly-background: #ffd700; /** TODO: поменять */
+
+  --mainred: #aa1828;
+
+  --maingray-foreground: #2a2b31;
+  --miangray-background: #2a2b31; /** TODO: поменять */
 
   --light-gray-foreground: #676774;
   --light-gray-background: #676774; /** TODO: поменять */

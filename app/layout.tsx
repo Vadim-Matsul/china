@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 import './style/global.css'
 
 export const metadata: Metadata = {
-  title: 'INDX',
-  description: 'Превращаем ресурсы в цифровые активы',
+  title: 'GOODS FROM CHINA',
+  description: '',
   icons: {
-    icon: "/images/favicon.png",
+    icon: "/images/logo_picture.png",
   },
 }
 

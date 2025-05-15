@@ -6,9 +6,122 @@
 @import url('./burger_menu.css');
 @import url('./scrollbar.css');
 @import url('./suisseIntl_font.css');
+@import url('./embla.css');
 
 body {
   color: var(--foreground);
-  background: #eaeaec;
+  background: #0d0d0d;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.cont {
+  @apply max-w-[1440px] 1.5xl:mx-auto 1.5xl:w-[1440px];
+}
+
+.basepaddings {
+  @apply px-5;
+}
+
+.btn {
+  @apply rounded-xl bg-gradient-to-tr from-mainred via-[#9e542f] to-[#b82e3e]
+    px-4 py-3 font-suisse font-bold shadow-sm shadow-fierly transition-all [text-shadow:_0_2px_2px_black];
+  @apply hover:scale-95 hover:opacity-95 hover:[text-shadow:_0_3px_3px_black];
+  @apply focus:scale-95 focus:opacity-95;
+  @apply shadow-[inset_0_4px_8px_0_rgba(0,0,0,0.5)];
+
+  /* @apply disabled:hover:!bg-blue-500 */
+}
+
+.btn:disabled {
+  @apply hover:scale-100 focus:scale-100 hover:opacity-100 focus:opacity-100;
+  @apply from-gray-600 via-gray-500 to-gray-500;
+}
+
+.inp {
+  /* @apply border-b-[1px] border-b-black bg-transparent font-bold tracking-wide text-black outline-none;
+  @apply pr-10 placeholder:text-black/50;
+  @apply transition-all focus:border-b-[2px]; */
+
+  @apply rounded-xl bg-gradient-to-tr from-mainred via-[#9e542f] to-[#b82e3e]
+  px-4 py-3 font-suisse font-bold shadow-sm shadow-fierly transition-all [text-shadow:_0_2px_2px_black];
+  /* @apply hover:scale-95 hover:opacity-95 hover:[text-shadow:_0_3px_3px_black]; */
+  /* @apply focus:scale-95 focus:opacity-95; */
+  @apply shadow-[inset_0_4px_8px_0_rgba(0,0,0,0.5)];
+}
+
+.border-dashed-thick {
+  border-style: dashed;
+  border-width: 2px; /* Толщина границы */
+  border-image-slice: 5;
+  border-image-source: linear-gradient(to right, #aa1828 50%, transparent 50%);
+  border-image-width: 3;
+  border-spacing: 4px; /* Увеличивает промежутки между пунктирами */
+}
+
+.border-custom-dash {
+  border: 2px dashed transparent;
+  background: linear-gradient(white, white) padding-box,
+    repeating-linear-gradient(90deg, #aa1828 0, #aa1828 5px, transparent 5px, transparent 10px)
+      border-box;
+}
+
+.masked-text {
+  color: transparent;
+  background-image: url('/images/ieroglifi_chin.png');
+  background-size: 120%;
+  background-position: 0 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes fireball-movement {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(90px, 30px) scale(1.1);
+  }
+  50% {
+    transform: translate(20px, 60px) scale(0.8);
+  }
+  75% {
+    transform: translate(40px, 30px) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes fireball-glow {
+  0% {
+    box-shadow: 0 0 30px 10px rgba(255, 100, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 50px 15px rgba(255, 150, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 30px 10px rgba(255, 100, 0, 0.7);
+  }
+}
+
+.animate-fireball {
+  animation: fireball-movement 15s infinite ease-in-out, fireball-glow 3s infinite alternate;
+  filter: brightness(1.2);
+  background: radial-gradient(
+    circle,
+    rgba(255, 100, 0, 1) 0%,
+    rgba(255, 200, 0, 1) 50%,
+    rgba(255, 80, 0, 1) 100%
+  );
 }

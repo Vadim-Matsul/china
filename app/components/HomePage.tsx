@@ -1,14 +1,13 @@
-import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
-import { About } from './About'
-import { Benefits } from './Benefits'
-import { InteractionScheme } from './InteractionScheme'
-import { MountainGraphIMG } from './MountainGraphIMG'
-import { Resale } from './Resale'
-import { ResolveTasks } from './ResolveTasks'
-import { Slogan } from './Slogan'
-
-import { motion } from 'framer-motion';
+import { Intro } from './Intro'
+import { HowItWorks } from './HowItWorks'
+import { CanBring } from './CanBring'
+import { ContactUs } from './ContactUs'
+import { AboutUs } from './AboutUs'
+import { InstagramIcon } from './icons/InstagramIcon'
+import { CallPhoneIcon } from './icons/CallPhoneIcon'
+import { contacts } from '../configs/contacts'
+import { Footer } from '@/components/Footer'
 
 type Props = {}
 
@@ -17,48 +16,70 @@ export function HomePage({ }: Props) {
     <>
       <Header />
 
-      <section className='flex min-h-[100svh] flex-col'>
-        <div className='pt-[var(--header-mobile-height)] md:pt-[var(--header-desktop-height)]'>
-          <Section>
-            <Slogan />
-          </Section>
-          <Section>
-            <About />
-          </Section>
-          <Section>
-            <Benefits />
-          </Section>
-          <Section>
-            <MountainGraphIMG />
-          </Section>
-          <Section>
-            <InteractionScheme />
-          </Section>
-          <Section>
-            <ResolveTasks />
-          </Section>
-          <Section>
-            <Resale />
-          </Section>
+      <section className='flex min-h-[100vh] flex-col'>
+        <div className='pt-[var(--header-mobile-height)] md:pt-[var(--header-desktop-height)] grow flex flex-col'>
+          <Intro />
+          <AboutUs />
+          <HowItWorks />
+          <div className='relative max-w-[1440px] 1.5xl:mx-auto'>
+            <div className='absolute inset-0 z-[2]'>
+              <div className='absolute inset-0 z-[4] backdrop-blur-[50px]' />
+              <div
+                className='bg-fierly w-[200px] h-[100px] rounded-full absolute top-[100px] left-[200px] opacity-60 animate-fireball'
+              />
+              <div
+                className='bg-fierly w-[100px] h-[50px] rounded-full absolute top-1/2 left-1/2 opacity-70 animate-fireball'
+              />
+              <div
+                className='bg-fierly w-[100px] h-[100px] rounded-full absolute bottom-20 right-1/3 opacity-50 animate-fireball'
+              />
+            </div>
+
+            <div className='relative z-[4]'>
+              <CanBring />
+              <ContactUs />
+            </div>
+          </div>
         </div>
 
-        <div className='mt-16 md:mt-14 lg:mt-24'>
-          <Footer />
-        </div>
+        <Footer />
       </section>
+
+      <div
+        className='fixed bottom-3 p-1 right-3 z-[100] flex items-center justify-center gap-2'
+      >
+        <a
+          href={contacts.instagram.link}
+          target='_blank'
+          className='transition-all hover:scale-90'
+        >
+          <InstagramIcon className='w-10 h-10' />
+        </a>
+        <a
+          href={`tel:+${contacts.phone.number}`}
+          className='transition-all hover:scale-90'
+        >
+          <CallPhoneIcon className='w-7 h-7' />
+        </a>
+      </div>
     </>
   )
 }
 
-function Section({ children }: { children: React.ReactNode }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.5 }}
-    >
-      {children}
-    </motion.div>
-  );
-};
+// type SectionProps = {
+//   children: React.ReactNode,
+// }
+
+// function Section({ children }: SectionProps) {
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0, y: 50 }}
+//       whileInView={{ opacity: 1, y: 0 }}
+//       viewport={{ once: true, amount: 0.2 }}
+//       transition={{ duration: 0.5 }}
+//       className='flex flex-col grow relative'
+//     >
+//       {children}
+//     </motion.div>
+//   );
+// };

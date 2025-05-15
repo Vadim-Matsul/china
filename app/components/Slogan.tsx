@@ -45,19 +45,21 @@ export function Slogan({ }: Props) {
     <section className={cn('mx-auto mt-8 max-w-[1440px] overflow-x-hidden md:mt-3')}>
       <div>
         <h1
-          key='Превращаем ресурсы в цифровые активы'
+          // key='Превращаем ресурсы в цифровые активы'
           className={cn(
-            'mx-auto text-center font-medium flex gap-2 flex-wrap justify-center',
-            'max-w-[310px] text-[28px] leading-[30.24px]',
-            'md:max-w-[470px] md:text-[42px] md:leading-[45.36px]',
-            'lg:max-w-[800px] lg:text-7xl lg:leading-[79.20px]'
+            'mx-auto text-center font-medium flex flex-col gap-2 flex-wrap justify-center items-center',
+            'text-[28px] leading-[30.24px]',
+            'md:text-[42px] md:leading-[45.36px]',
+            'lg:text-7xl lg:leading-[79.20px]'
           )}
         >
-          <span>Превращаем</span>
-          <BoxReveal width='fit-content'>
-            <span className='text-fierly'>ресурсы</span>
-          </BoxReveal>
-          <span>в цифровые активы</span>
+          <span>Оптовые поставки товаров</span>
+          <div className='flex items-center'>
+            <span>из</span>
+            <BoxReveal width='fit-content'>
+              <span className='text-fierly'>&nbsp;Китая</span>
+            </BoxReveal>
+          </div>
         </h1>
 
         <p
@@ -67,8 +69,9 @@ export function Slogan({ }: Props) {
             'md:max-w-[550px] md:text-base md:leading-[21.12px]'
           )}
         >
-          Мы позволяем обходить большинство сложностей современной Российской экономики и помогаем в
-          построении взаимовыгодных связей мировым финансовым институция.
+          Какое-то описание
+          ( Пример: Мы позволяем обходить большинство сложностей современной Российской экономики и помогаем в
+          построении взаимовыгодных связей мировым финансовым институция. )
         </p>
       </div>
 

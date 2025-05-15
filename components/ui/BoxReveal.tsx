@@ -9,6 +9,7 @@ interface BoxRevealProps {
   boxColor?: string
   /** В секундах */
   duration?: number
+  delay?: number
   className?: string
 }
 
@@ -18,6 +19,7 @@ export function BoxReveal({
   boxColor,
   duration,
   className,
+  delay = 0.25,
 }: BoxRevealProps) {
   const mainControls = useAnimation()
   const slideControls = useAnimation()
@@ -48,7 +50,7 @@ export function BoxReveal({
         }}
         initial='hidden'
         animate={mainControls}
-        transition={{ duration: duration ? duration : 0.5, delay: 0.25 }}
+        transition={{ duration: duration ? duration : 0.5, delay }}
       >
         {children}
       </motion.div>
@@ -68,7 +70,7 @@ export function BoxReveal({
           left: 0,
           right: 0,
           zIndex: 20,
-          background: boxColor ? boxColor : '#ff492a',
+          background: boxColor ? boxColor : '#FFD700',
         }}
       />
     </div>
