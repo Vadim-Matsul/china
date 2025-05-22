@@ -21,7 +21,7 @@ export function HomePage({ }: Props) {
           <Intro />
           <AboutUs />
           <HowItWorks />
-          <div className='relative max-w-[1440px] 1.5xl:mx-auto'>
+          <div className='relative max-w-[1440px] 1.5xl:mx-auto overflow-hidden'>
             <div className='absolute inset-0 z-[2]'>
               <div className='absolute inset-0 z-[4] backdrop-blur-[50px]' />
               <div
