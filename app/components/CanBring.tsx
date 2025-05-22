@@ -1,5 +1,4 @@
 import { cn } from '@/utils/cn'
-import { Blot3Icon } from './icons/Blot3Icon'
 import { anchors } from '../configs/anchors'
 
 type Props = {}
